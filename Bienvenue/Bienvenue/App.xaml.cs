@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using Bienvenue.ViewModel;
+
 namespace Bienvenue
 {
     /// <summary>
@@ -77,6 +79,8 @@ namespace Bienvenue
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+
+            var viewModel = new CountrySelectionViewModel();
         }
 
         /// <summary>

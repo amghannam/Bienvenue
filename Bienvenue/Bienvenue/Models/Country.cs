@@ -25,8 +25,12 @@ namespace Bienvenue.Models
             return JsonConvert.DeserializeObject<Country>(jsonString);
         }
 
-        private string _countryName; // Private Backing Store
-        [DataMember] // Mark with attribute for deserialization.
+        // Declare a private backing store variable.
+        private string _countryName;
+       
+        // Make sure to use the DataMember attribute to mark an item
+        // for (de)serialization. 
+        [DataMember]
         public string CountryName
         {
             get                         // Essentially equivalent to:
