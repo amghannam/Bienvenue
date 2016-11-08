@@ -12,33 +12,32 @@ namespace Bienvenue.ViewModel
     {
 
         private static ICollection<CountryViewModel> _availableCountries;
-        public static ICollection<CountryViewModel> AvailableCountries
+        public ICollection<CountryViewModel> AvailableCountries
         {
             get 
             {
                 return _availableCountries ?? GetAvailableCountries();
             }
-            private set {
-                _availableCountries = value;
-            }
         }
 
-        private static ICollection<CountryViewModel> GetAvailableCountries()
+        private ICollection<CountryViewModel> GetAvailableCountries()
         {
             var directory = System.IO.Path.Combine("Data", 
                 System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
 
             var files = System.IO.Directory.EnumerateFiles(directory);
 
-            AvailableCountries = files.Select((x) =>
+            _availableCountries = files.Select((x) =>
             {
                 return new CountryViewModel
                 {
                     Country = Country.FromJson(System.IO.File.ReadAllText(x))
                 };
-            }).ToList(); 
+            }).ToList();
 
-            return AvailableCountries;
+            RaisePropertyChanged("AvailableCountries");
+
+            return _availableCountries;
         }
 
         private CountryViewModel _selectedCountry;
