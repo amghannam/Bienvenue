@@ -18,6 +18,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ComboBox ItemsSource="{Binding AvailableCountries}" Grid.Row="0" Grid.Column="0"/>
+        <ComboBox ItemsSource="{Binding AvailableCountries}" Grid.Row="0" Grid.Column="0" SelectionChanged="ComboBox_SelectionChanged"/>
     </Grid>
 </UserControl>

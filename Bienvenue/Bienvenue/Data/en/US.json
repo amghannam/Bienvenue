@@ -1,8 +1,5 @@
 ﻿{
     "CountryName": "United States of America",
     "Abbreviation": "USA",
-    "ImageUrl": "https://some/really/longurl",
-    "Properties": {
-        
-    }
+    "ImageUrl": "https://some/really/longurl"
 }
