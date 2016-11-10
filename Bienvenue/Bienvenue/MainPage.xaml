@@ -42,6 +42,7 @@
                 <AppBarSeparator/>
                 <AppBarButton Label="Reset" Command="{Binding ResetCountries}"/>
                 <AppBarButton Label="Add" Command="{Binding AddCountry}"/>
+                <AppBarButton Label="Exit"/> 
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </Grid>
