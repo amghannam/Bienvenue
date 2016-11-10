@@ -16,5 +16,13 @@ namespace Bienvenue
                 return new CountrySelectionViewModel();
             }
         }
+
+        public MainPageViewModel MainViewModel
+        {
+            get
+            {
+                return new MainPageViewModel();
+            }
+        }
     }
 }

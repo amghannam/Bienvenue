@@ -7,17 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300"
-    d:DesignWidth="400"
-    DataContext="{Binding CountrySelectViewModel, Source={StaticResource ViewModelLocator}}">
+    d:DesignWidth="400" VerticalAlignment="Stretch">
 
-    <Grid>
+    <Grid Background="White" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ComboBox ItemsSource="{Binding AvailableCountries}" Grid.Row="0" Grid.Column="0" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox ItemsSource="{Binding AvailableCountries}" Grid.Row="0" Grid.Column="0" FlowDirection="LeftToRight" SelectedItem="{Binding SelectedCountry,Mode=TwoWay}" SelectionChanged="ComboBox_SelectionChanged" HorizontalAlignment="Stretch"/>
+        <StackPanel Grid.Row="1" DataContext="{Binding SelectedCountry}">
+            <TextBlock Text="{Binding Country.Name}" Foreground="Black" FontSize="50"/>
+        </StackPanel>
     </Grid>
 </UserControl>

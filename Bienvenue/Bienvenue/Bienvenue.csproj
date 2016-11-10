@@ -127,6 +127,7 @@
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="ViewModel\CountrySelectionViewModel.cs" />
     <Compile Include="ViewModel\CountryViewModel.cs" />
+    <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="Views\CountryUserControl.xaml.cs">
       <DependentUpon>CountryUserControl.xaml</DependentUpon>
     </Compile>
