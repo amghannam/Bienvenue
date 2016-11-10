@@ -1,5 +1,21 @@
 ﻿{
     "CountryName": "United States of America",
     "Abbreviation": "USA",
-    "ImageUrl": "https://some/really/longurl"
+    "ImageUrl": "https://some/really/longurl",
+    "Currency": "US Dollar ($)",
+    "DateFormat": "MM/DD/YYYY",
+    "TimeFormat": "hh:mm:ss tt",
+    "12Hour": true,
+    "PhonePrefix": "+1",
+    "ThousandsSeperator": ",",
+    "DecimalSeperator": ".",
+    "Population": 318900000,
+    "Size": 9.834,
+    "Languages": "English, Spanish, Chinese",
+    "PrimaryInterfaceDirection": "Left to right",
+    "PaperSize": "8.5 in x 11 in",
+    "LengthUnits": "feet (ft), inches (in)",
+    "WeightUnits": "pound (lb), ton (t)",
+    "Volume": "gallon (g)",
+    "DefaultKeyboard": "QWERTY"
 }

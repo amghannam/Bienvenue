@@ -36,17 +36,23 @@
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Margin" Value="20,10"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <ContentPresenter/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
         <CommandBar Background="RoyalBlue" Foreground="White" Grid.Row="2" IsOpen="True" IsSticky="True">
             <CommandBar.PrimaryCommands>
-                <AppBarButton Label="Cortana"/>
-                <AppBarSeparator/>
-                <AppBarButton Label="Compare"/>
-                <AppBarSeparator/>
-                <AppBarButton Label="Reset" Command="{Binding ResetCountries}"/>
-                <AppBarButton Label="Add" Command="{Binding AddCountry}"/>
+                <AppBarButton Label="Cortana" Icon="Microphone"/>
+                <AppBarButton Label="Compare" Icon="BrowsePhotos"/>
+                <AppBarButton Label="Reset" Command="{Binding ResetCountries}" Icon="Undo"/>
+                <AppBarButton Label="Add" Command="{Binding AddCountry}" Icon="Add"/>
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </Grid>

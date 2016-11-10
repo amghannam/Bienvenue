@@ -17,9 +17,15 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ComboBox ItemsSource="{Binding AvailableCountries}" Grid.Row="0" Grid.Column="0" FlowDirection="LeftToRight" SelectedItem="{Binding SelectedCountry,Mode=TwoWay}" SelectionChanged="ComboBox_SelectionChanged" HorizontalAlignment="Stretch"/>
-        <StackPanel Grid.Row="1" DataContext="{Binding SelectedCountry}">
-            <TextBlock Text="{Binding Country.Name}" Foreground="Black" FontSize="50"/>
-        </StackPanel>
+        <ComboBox ItemsSource="{Binding AvailableCountries}" Grid.Row="0" Grid.Column="0" FlowDirection="LeftToRight" SelectedItem="{Binding SelectedCountry,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectionChanged="ComboBox_SelectionChanged" HorizontalAlignment="Stretch"/>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Grid.Row="1" DataContext="{Binding SelectedCountry.Country}">
+                <Image>
+                    <Image.Source>
+                        <BitmapImage UriSource="https://commons.wikimedia.org/wiki/File:Manhattan_from_Weehawken,_NJ.jpg#/media/File:Manhattan_from_Weehawken,_NJ.jpg"></BitmapImage>
+                    </Image.Source>
+                </Image>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>
