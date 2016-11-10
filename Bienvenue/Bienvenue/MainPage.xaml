@@ -8,35 +8,39 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     DataContext="{Binding MainViewModel, Source={StaticResource ViewModelLocator}}">
-
+    <Page.Resources>
+        <Style TargetType="AppBarButton">
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         <ListView Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
                 ScrollViewer.HorizontalScrollMode="Enabled"
                 ScrollViewer.VerticalScrollMode="Disabled"
-                ItemsSource="{Binding CountryViewModels}">
-            <ListView.ItemsPanel>
+                ItemsSource="{Binding CountryViewModels}" VerticalContentAlignment="Stretch" VerticalAlignment="Stretch" SelectionMode="None">
+        <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Background="Transparent" Orientation="Horizontal"/>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <views:CountryUserControl Width="400"/>
+                    <views:CountryUserControl Width="400" VerticalContentAlignment="Stretch" VerticalAlignment="Stretch"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <CommandBar Background="RoyalBlue" Foreground="White" Grid.Row="2" IsOpen="True" IsSticky="True">
             <CommandBar.PrimaryCommands>
-                <AppBarButton Label="Cortana" Foreground="White"/>
+                <AppBarButton Label="Cortana"/>
                 <AppBarSeparator/>
-                <AppBarButton Label="Compare" Foreground="White"/>
+                <AppBarButton Label="Compare"/>
                 <AppBarSeparator/>
-                <AppBarButton Label="Reset" Foreground="White" Command="{Binding ResetCountries}"/>
+                <AppBarButton Label="Reset" Command="{Binding ResetCountries}"/>
                 <AppBarButton Label="Add" Command="{Binding AddCountry}"/>
             </CommandBar.PrimaryCommands>
         </CommandBar>
