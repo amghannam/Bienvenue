@@ -17,6 +17,8 @@
         <CommandBar Background="RoyalBlue" Foreground="White" Grid.Row="1" IsOpen="True" IsSticky="True">
             <CommandBar.PrimaryCommands>
                 <AppBarButton Label="Compare" Foreground="White"/>
+                <AppBarButton Label="Exit" Foreground="White"/>
+                <AppBarButton Label="Cortana" Foreground="White"/>
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </Grid>
