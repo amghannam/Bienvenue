@@ -33,6 +33,11 @@
                     <views:CountryUserControl Width="400" VerticalContentAlignment="Stretch" VerticalAlignment="Stretch"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
         </ListView>
         <CommandBar Background="RoyalBlue" Foreground="White" Grid.Row="2" IsOpen="True" IsSticky="True">
             <CommandBar.PrimaryCommands>
