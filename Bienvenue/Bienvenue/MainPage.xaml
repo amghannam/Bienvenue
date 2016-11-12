@@ -53,6 +53,7 @@
                 <AppBarButton Label="Compare" Icon="BrowsePhotos"/>
                 <AppBarButton Label="Reset" Command="{Binding ResetCountries}" Icon="Undo"/>
                 <AppBarButton Label="Add" Command="{Binding AddCountry}" Icon="Add"/>
+                <AppBarButton Label="Exit" Command="{Binding ExitApp}" Icon="Cancel"/> 
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </Grid>

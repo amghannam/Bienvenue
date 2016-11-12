@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Windows.UI.Xaml; 
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight;
 
@@ -71,5 +72,19 @@ namespace Bienvenue.ViewModel
             CountryViewModels = null;
         }
 
+        public RelayCommand ExitApp
+        {
+            get
+            {
+                return new RelayCommand(ExitCommand);
+            }
+        }
+
+        private void ExitCommand()
+        {
+            Application.Current.Exit(); 
+        }
     }
 }
+
+
