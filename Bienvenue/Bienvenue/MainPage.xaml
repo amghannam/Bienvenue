@@ -19,6 +19,7 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
+        <TextBlock Text="Bienvenue" Style="{StaticResource HeaderTextBlockStyle}" Foreground="RoyalBlue" Margin="20"/>
         <ListView Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
                 ScrollViewer.HorizontalScrollMode="Enabled"
                 ScrollViewer.VerticalScrollMode="Disabled"

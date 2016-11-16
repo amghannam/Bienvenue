@@ -25,7 +25,12 @@ namespace Bienvenue.Views
         {
             this.InitializeComponent();
 
-            CountryScroll.ViewChanging += CountryScroll_ViewChanging;
+            CountryScroll.ViewChanged += CountryScroll_ViewChanged; ;
+        }
+
+        private void CountryScroll_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        {
+            if (_viewModel != null) _viewModel.VerticalOffset = CountryScroll.VerticalOffset;
         }
 
         private void CountryScroll_ViewChanging(object sender, ScrollViewerViewChangingEventArgs e)
