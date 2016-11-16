@@ -6,8 +6,20 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400" VerticalAlignment="Stretch">
+    d:DesignHeight="800"
+    d:DesignWidth="400" VerticalAlignment="Stretch" DataContextChanged="UserControl_DataContextChanged">
+
+    <UserControl.Resources>
+        <Style x:Key="HeaderLabel" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="Foreground" Value="RoyalBlue"/>
+            <Setter Property="Margin" Value="0,10"/>
+        </Style>
+        <Style x:Key="Label" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+    </UserControl.Resources>
 
     <Grid Background="White" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
@@ -17,14 +29,46 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ComboBox ItemsSource="{Binding AvailableCountries}" Grid.Row="0" Grid.Column="0" FlowDirection="LeftToRight" SelectedItem="{Binding SelectedCountry,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectionChanged="ComboBox_SelectionChanged" HorizontalAlignment="Stretch"/>
-        <ScrollViewer Grid.Row="1">
-            <StackPanel Grid.Row="1" DataContext="{Binding SelectedCountry.Country}">
-                <Image>
+        <ComboBox ItemsSource="{Binding AvailableCountries}" Grid.Row="0" Grid.Column="0" FlowDirection="LeftToRight" SelectedItem="{Binding SelectedCountry,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch"/>
+        <ScrollViewer Grid.Row="1" x:Name="CountryScroll">
+            <StackPanel DataContext="{Binding SelectedCountry.Country}">
+                <Image Width="Auto" Stretch="Fill" Height="150">
                     <Image.Source>
-                        <BitmapImage UriSource="https://commons.wikimedia.org/wiki/File:Manhattan_from_Weehawken,_NJ.jpg#/media/File:Manhattan_from_Weehawken,_NJ.jpg"></BitmapImage>
+                        <BitmapImage UriSource="{Binding ImageUrl}"></BitmapImage>
                     </Image.Source>
                 </Image>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Abbreviation"></TextBlock>
+                <TextBlock Text="{Binding Abbreviation}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Currency"/>
+                <TextBlock Text="{Binding Currency}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Date Format"/>
+                <TextBlock Text="{Binding DateFormat}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Time Format"/>
+                <TextBlock Text="{Binding TimeFormat}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Phone Prefix"/>
+                <TextBlock Text="{Binding PhonePrefix}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Thousands Seperator"/>
+                <TextBlock Text="{Binding ThousandsSeperator}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Decimal Seperator"/>
+                <TextBlock Text="{Binding DecimalSeperator}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Population"/>
+                <TextBlock Text="{Binding Population}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Size"/>
+                <TextBlock Text="{Binding Size}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Languages"/>
+                <TextBlock Text="{Binding Languages}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Interface Directions"/>
+                <TextBlock Text="{Binding InterfaceDirection}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Paper Size"/>
+                <TextBlock Text="{Binding PaperSize}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Length Units"/>
+                <TextBlock Text="{Binding LengthUnits}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Weight Units"/>
+                <TextBlock Text="{Binding WeightUnits}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Volume"/>
+                <TextBlock Text="{Binding Volume}"/>
+                <TextBlock Style="{StaticResource HeaderLabel}" Text="Default Keyboard"/>
+                <TextBlock Text="{Binding DefaultKeyboard}"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>
