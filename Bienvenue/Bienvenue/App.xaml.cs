@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Diagnostics; 
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -14,6 +15,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Media.SpeechRecognition;
+using Windows.ApplicationModel.VoiceCommands;
+using Windows.Storage;
+using Windows.UI.Popups; 
 
 using Bienvenue.ViewModel;
 
@@ -39,7 +44,7 @@ namespace Bienvenue
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -80,7 +85,43 @@ namespace Bienvenue
                 Window.Current.Activate();
             }
 
+            try
+            {
+                StorageFile ccd = await Package.Current.InstalledLocation.GetFileAsync(@"CortanaCommandDefinitions.xml");
+                await VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(ccd); 
+            } catch (Exception ex)
+            {
+                Debug.Write("Failed to load voice commands because: " + ex.Message); 
+            }
+
             var viewModel = new CountrySelectionViewModel();
+        }
+
+        protected async override void OnActivated(IActivatedEventArgs args)
+        {
+            base.OnActivated(args);
+
+            MessageDialog dialog = new MessageDialog("");
+            MainPageViewModel model = new MainPageViewModel();
+
+            if (args.Kind == ActivationKind.VoiceCommand)
+            {
+                VoiceCommandActivatedEventArgs cmd = args as VoiceCommandActivatedEventArgs;
+                SpeechRecognitionResult result = cmd.Result;
+
+                string commandName = result.RulePath[0];
+                switch (commandName) // we can add as many commands as need to execute here 
+                {
+                    case "Exit":
+                        dialog.Content = "Exiting now..."; 
+                        model.ExitCommand(); 
+                        break;
+                    default:
+                        Debug.WriteLine("Could not find command.");
+                        break; 
+                }
+            }
+            await dialog.ShowAsync();
         }
 
         /// <summary>

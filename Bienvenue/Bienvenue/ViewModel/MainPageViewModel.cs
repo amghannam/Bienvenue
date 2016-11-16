@@ -49,7 +49,7 @@ namespace Bienvenue.ViewModel
             }
         }
 
-        private void AddCountryCommand()
+        public void AddCountryCommand()
         {
             CountryViewModels.Add(new CountrySelectionViewModel());
         }
@@ -67,7 +67,7 @@ namespace Bienvenue.ViewModel
             }
         }
 
-        private void ResetCountriesCommand()
+        public void ResetCountriesCommand()
         {
             CountryViewModels = null;
         }
@@ -80,7 +80,7 @@ namespace Bienvenue.ViewModel
             }
         }
 
-        private void ExitCommand()
+        public void ExitCommand()
         {
             Application.Current.Exit(); 
         }
