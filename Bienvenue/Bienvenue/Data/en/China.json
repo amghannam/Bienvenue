@@ -1,7 +1,7 @@
 {
     "CountryName": "China",
     "Abbreviation": "CN",
-    "ImageUrl": ""
+    "ImageUrl": "",
     "Currency": "Yuan",
     "DateFormat": "YYYY/MM/DD",
     "TimeFormat": "H:mm:ss",

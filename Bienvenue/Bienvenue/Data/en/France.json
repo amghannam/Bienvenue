@@ -1,7 +1,7 @@
 {
     "CountryName": "France",
     "Abbreviation": "FR",
-    "ImageUrl": ""
+    "ImageUrl": "",
 	"Currency": "Euro",
     "DateFormat": "DD/MM/YYYY",
     "TimeFormat": "HH:mm:ss",
