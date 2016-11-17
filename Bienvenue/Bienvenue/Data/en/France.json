@@ -1,5 +1,19 @@
-﻿{
+{
     "CountryName": "France",
     "Abbreviation": "FR",
-    "ImageUrl": "https://some/really/longurl"
+    "ImageUrl": ""
+	"Currency": "Euro",
+    "DateFormat": "DD/MM/YYYY",
+    "TimeFormat": "HH:mm:ss",
+    "12Hour": false,
+    "PhonePrefix": "+33",
+    "ThousandsSeperator": "Space",
+    "DecimalSeperator": ",",
+    "Population": 66567560,
+    "Area": "643427 sq.km",
+    "Languages": "French",
+    "PrimaryInterfaceDirection": "Left to right",
+    "LengthUnits": "meter (m)",
+    "WeightUnits": "Kilogram (kg)",
+    "Volume": "Litre (l)"
 }
