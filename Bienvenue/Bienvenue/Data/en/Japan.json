@@ -1,5 +1,19 @@
-﻿{
+{
     "CountryName": "Japan",
     "Abbreviation": "JP",
-    "ImageUrl": "https://some/really/longurl"
+    "ImageUrl": "";
+	"Currency": "Yen",
+    "DateFormat": "YYYY-MM-DD",
+    "TimeFormat": "H:mm:ss",
+    "12Hour": false,
+    "PhonePrefix": "+81",
+    "ThousandsSeperator": ",",
+    "DecimalSeperator": ".",
+    "Population": 126702136,
+    "Area": "377972 sq.km",
+    "Languages": "Japanese",
+    "PrimaryInterfaceDirection": "Left to right, right to left",
+    "LengthUnits": "meter (m)",
+    "WeightUnits": "Kilogram (kg)",
+    "Volume": "Litre (l)"
 }
