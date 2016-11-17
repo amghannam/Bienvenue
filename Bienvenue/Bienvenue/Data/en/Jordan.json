@@ -1,7 +1,7 @@
 {
     "CountryName": "Jordan",
     "Abbreviation": "JO",
-    "ImageUrl": "";
+    "ImageUrl": "",
 	"Currency": "Dinar",
     "DateFormat": "DD/MM/YYYY",
     "TimeFormat": "hh:mm:ss tt",
