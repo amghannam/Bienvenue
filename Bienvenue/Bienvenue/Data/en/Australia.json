@@ -1,5 +1,19 @@
-﻿{
+{
     "CountryName": "Australia",
     "Abbreviation": "AU",
-    "ImageUrl": "https://some/really/longurl"
+    "ImageUrl": ""
+	"Currency": "Australian Dollar ($)",
+    "DateFormat": "DD/MM/YYYY",
+    "TimeFormat": "h:mm:ss tt",
+    "12Hour": true,
+    "PhonePrefix": "+61",
+    "ThousandsSeperator": ",",
+    "DecimalSeperator": ".",
+    "Population": 22992654,
+    "Area": "7686850 sq.km",
+    "Languages": "English",
+    "PrimaryInterfaceDirection": "Left to right",
+    "LengthUnits": "meter (m)",
+    "WeightUnits": "Kilogram (kg)",
+    "Volume": "Litre (l)"
 }
