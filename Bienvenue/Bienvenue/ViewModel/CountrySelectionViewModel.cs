@@ -78,8 +78,7 @@ namespace Bienvenue.ViewModel
         {
             get
             {
-                return _selectedCountry ??
-                    (_selectedCountry = AvailableCountries.Where(x => x.Country.Abbreviation == "USA").FirstOrDefault());
+                return _selectedCountry ?? (_selectedCountry = AvailableCountries.Where(x => x.Country.Abbreviation == "USA").FirstOrDefault());
             }
             set
             {

@@ -33,7 +33,7 @@
         <ComboBox ItemsSource="{Binding AvailableCountries}" Grid.Row="1" Grid.Column="0" FlowDirection="LeftToRight" SelectedItem="{Binding SelectedCountry,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch"/>
         <ScrollViewer Grid.Row="2" x:Name="CountryScroll">
             <StackPanel DataContext="{Binding SelectedCountry.Country}">
-                <Image Width="Auto" Stretch="Fill" Height="150">
+                <Image Width="Auto" Stretch="Uniform" Height="150">
                     <Image.Source>
                         <BitmapImage UriSource="{Binding ImageUrl}"></BitmapImage>
                     </Image.Source>
