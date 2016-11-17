@@ -1,5 +1,19 @@
-﻿{
+{
     "CountryName": "Germany",
     "Abbreviation": "GR",
-    "ImageUrl": "https://some/really/longurl"
+    "ImageUrl": ""
+    "Currency": "Euro",
+    "DateFormat": "YYYY-MM-DD",
+    "TimeFormat": "HH:mm:ss",
+    "12Hour": false,
+    "PhonePrefix": "+49",
+    "ThousandsSeperator": ",",
+    "DecimalSeperator": ".",
+    "Population": 80722792,
+    "Area": "357168 sq.km",
+    "Languages": "German",
+    "PrimaryInterfaceDirection": "Left to right",
+    "LengthUnits": "meter (m)",
+    "WeightUnits": "Kilogram (kg)",
+    "Volume": "Litre (l)"
 }
