@@ -11,5 +11,18 @@
     <Feedback>Alright, exiting...</Feedback>
       <Navigate/>
     </Command>
+        <Command Name="Reset">
+          <Example>Start over, reset</Example>
+          <ListenFor>Start over</ListenFor>
+        <ListenFor>Reset</ListenFor>
+        <Feedback>Restarting...</Feedback>
+          <Navigate/>
+        </Command>
+          <Command Name="AddCountry">
+          <Example>Add a new country</Example>
+          <ListenFor>Add a new country</ListenFor>
+        <Feedback>Adding country...</Feedback>
+          <Navigate/>
+        </Command>
   </CommandSet>
 </VoiceCommands>

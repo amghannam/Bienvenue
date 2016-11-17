@@ -82,7 +82,7 @@ namespace Bienvenue
                     rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
                 // Ensure the current window is active
-                Window.Current.Activate();
+                Window.Current.Activate(); 
             }
 
             try
@@ -116,12 +116,24 @@ namespace Bienvenue
                         dialog.Content = "Exiting now..."; 
                         model.ExitCommand(); 
                         break;
+                    case "Reset":
+                        dialog.Content = "Reseting...";
+                       // model.ResetCountriesCommand();
+                        break;
+                    case "Start over":
+                        dialog.Content = "Reseting...";
+                      //  model.ResetCountriesCommand();
+                        break;
+                    case "Add a new country":
+                        dialog.Content = "Adding...";
+                       // model.AddCountryCommand();
+                        break;
                     default:
                         Debug.WriteLine("Could not find command.");
                         break; 
                 }
             }
-            await dialog.ShowAsync();
+            await dialog.ShowAsync(); 
         }
 
         /// <summary>
