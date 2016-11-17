@@ -2,7 +2,7 @@
     "CountryName": "Germany",
     "Abbreviation": "GR",
     "ImageUrl": ""
-	"Currency": "Euro",
+    "Currency": "Euro",
     "DateFormat": "YYYY-MM-DD",
     "TimeFormat": "HH:mm:ss",
     "12Hour": false,
