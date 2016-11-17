@@ -2,7 +2,7 @@
     "CountryName": "Australia",
     "Abbreviation": "AU",
     "ImageUrl": ""
-	"Currency": "Australian Dollar ($)",
+    "Currency": "Australian Dollar ($)",
     "DateFormat": "DD/MM/YYYY",
     "TimeFormat": "h:mm:ss tt",
     "12Hour": true,
