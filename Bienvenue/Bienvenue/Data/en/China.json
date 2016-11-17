@@ -1,5 +1,19 @@
-﻿{
+{
     "CountryName": "China",
     "Abbreviation": "CN",
-    "ImageUrl": "https://some/really/longurl"
+    "ImageUrl": ""
+	"Currency": "Yuan",
+    "DateFormat": "YYYY/MM/DD",
+    "TimeFormat": "H:mm:ss",
+    "12Hour": false,
+    "PhonePrefix": "+86",
+    "ThousandsSeperator": ",",
+    "DecimalSeperator": ".",
+    "Population": 1366993920,
+    "Area": "9596960 sq.km",
+    "Languages": "Standard Mandarin",
+    "PrimaryInterfaceDirection": "Left to right, right to left",
+    "LengthUnits": "meter (m)",
+    "WeightUnits": "Kilogram (kg)",
+    "Volume": "Litre (l)"
 }
