@@ -1,5 +1,19 @@
-﻿{
+{
     "CountryName": "Canada",
-    "Abbreviation": "CN",
-    "ImageUrl": "https://some/really/longurl"
+    "Abbreviation": "CA",
+    "ImageUrl": ""
+	"Currency": "Dollar",
+    "DateFormat": "DD/MM/YYYY, MM/DD/YYYY, YYYY/MM/DD",
+    "TimeFormat": "(English h:mm:ss tt) (French HH:mm:ss)",
+    "12Hour": true,
+    "PhonePrefix": "+1",
+    "ThousandsSeperator": "(French Space) (English ,)",
+    "DecimalSeperator": "(French ,) (English .)",
+    "Population": 35362904,
+    "Area": "9984670 sq.km",
+    "Languages": "English, French",
+    "PrimaryInterfaceDirection": "Left to right",
+    "LengthUnits": "meter (m)",
+    "WeightUnits": "Kilogram (kg)",
+    "Volume": "Litre (l)"
 }
