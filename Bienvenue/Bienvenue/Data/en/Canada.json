@@ -2,7 +2,7 @@
     "CountryName": "Canada",
     "Abbreviation": "CA",
     "ImageUrl": ""
-	"Currency": "Dollar",
+    "Currency": "Dollar",
     "DateFormat": "DD/MM/YYYY, MM/DD/YYYY, YYYY/MM/DD",
     "TimeFormat": "(English h:mm:ss tt) (French HH:mm:ss)",
     "12Hour": true,
