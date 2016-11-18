@@ -182,6 +182,13 @@ namespace Bienvenue.Models
             set { _population = value; RaisePropertyChanged();  }
         }
 
+        public string PopulationStr 
+        {
+            get {
+                return Population.ToString("N0");
+            }
+        }
+
         private double _size;
         [DataMember]
         public double Size

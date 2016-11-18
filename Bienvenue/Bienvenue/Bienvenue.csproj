@@ -114,6 +114,7 @@
     <Content Include="Data\en\United Arab Emirates.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Data\en\Jordan.json" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

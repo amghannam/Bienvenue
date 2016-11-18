@@ -102,7 +102,8 @@ namespace Bienvenue
             base.OnActivated(args);
 
             MessageDialog dialog = new MessageDialog("");
-            MainPageViewModel model = new MainPageViewModel();
+            var modelLocator = Resources["ViewModelLocator"] as ViewModelLocator;
+            MainPageViewModel model = modelLocator?.MainViewModel;
 
             if (args.Kind == ActivationKind.VoiceCommand)
             {

@@ -53,7 +53,7 @@
                 <TextBlock Style="{StaticResource HeaderLabel}" Text="Decimal Seperator"/>
                 <TextBlock Text="{Binding DecimalSeperator}"/>
                 <TextBlock Style="{StaticResource HeaderLabel}" Text="Population"/>
-                <TextBlock Text="{Binding Population}"/>
+                <TextBlock Text="{Binding PopulationStr}"/>
                 <TextBlock Style="{StaticResource HeaderLabel}" Text="Size"/>
                 <TextBlock Text="{Binding Size}"/>
                 <TextBlock Style="{StaticResource HeaderLabel}" Text="Languages"/>

@@ -17,11 +17,12 @@ namespace Bienvenue
             }
         }
 
+        private MainPageViewModel _mainViewModel;
         public MainPageViewModel MainViewModel
         {
             get
             {
-                return new MainPageViewModel();
+                return _mainViewModel ?? (_mainViewModel = new MainPageViewModel());
             }
         }
     }
