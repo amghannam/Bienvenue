@@ -10,10 +10,12 @@ namespace Bienvenue
 {
     public class ViewModelLocator
     {
-        public CountrySelectionViewModel CountrySelectViewModel
+
+        public CountrySelectionViewModel CountryViewModel
         {
             get {
-                return new CountrySelectionViewModel();
+  
+              return new CountrySelectionViewModel();
             }
         }
 

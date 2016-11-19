@@ -119,11 +119,11 @@ namespace Bienvenue
                         break;
                     case "Reset":
                         dialog.Content = "Reseting...";
-                       // model.ResetCountriesCommand();
+                        model.ResetCountriesCommand();
                         break;
                     case "Start over":
                         dialog.Content = "Reseting...";
-                      //  model.ResetCountriesCommand();
+                        model.ResetCountriesCommand();
                         break;
                     case "Add a new country":
                         dialog.Content = "Adding...";

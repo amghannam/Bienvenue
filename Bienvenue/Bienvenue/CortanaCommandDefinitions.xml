@@ -8,7 +8,7 @@
       <Example>Exit, quit</Example>
     <ListenFor>Exit</ListenFor>
     <ListenFor>Quit</ListenFor>
-    <Feedback>Alright, exiting...</Feedback>
+    <Feedback>Exiting...</Feedback>
       <Navigate/>
     </Command>
         <Command Name="Reset">
