@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Bienvenue.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,7 +26,7 @@ namespace Bienvenue.Views
         {
             this.InitializeComponent();
 
-            CountryScroll.ViewChanged += CountryScroll_ViewChanged; ;
+            CountryScroll.ViewChanged += CountryScroll_ViewChanged;
         }
 
         private void CountryScroll_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
@@ -35,12 +36,12 @@ namespace Bienvenue.Views
 
         private void CountryScroll_ViewChanging(object sender, ScrollViewerViewChangingEventArgs e)
         {
-            if(_viewModel != null) _viewModel.VerticalOffset = e.NextView.VerticalOffset;
+            
         }
 
         private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if(e.PropertyName == "VerticalOffset") {
+            if(e.PropertyName == "VerticalOffset" && CountryScroll.VerticalOffset != _viewModel.VerticalOffset) {
                 CountryScroll.ChangeView(null, _viewModel.VerticalOffset, null);
             }
         }

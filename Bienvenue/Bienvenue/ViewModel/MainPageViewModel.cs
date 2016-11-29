@@ -35,23 +35,27 @@ namespace Bienvenue.ViewModel
             }
         }
 
-        private RelayCommand _addCountry;
-        public RelayCommand AddCountry
+        private RelayCommand<string> _addCountry;
+        public RelayCommand<string> AddCountry
         {
             get 
             {
                 if(_addCountry == null) 
                 {
-                    _addCountry = new RelayCommand(AddCountryCommand);
+                    _addCountry = new RelayCommand<string>(AddCountryCommand);
                 }
 
                 return _addCountry;
             }
         }
 
-        public void AddCountryCommand()
+        public void AddCountryCommand(string country = "United States of America")
         {
-            CountryViewModels.Add(new CountrySelectionViewModel());
+            var viewModel = new CountrySelectionViewModel();
+            viewModel.SelectedCountry = viewModel.AvailableCountries.Where(x => x.Country.CountryName == country).FirstOrDefault();
+
+            CountryViewModels.Add(viewModel);
+
         }
 
         private RelayCommand _resetCountries;

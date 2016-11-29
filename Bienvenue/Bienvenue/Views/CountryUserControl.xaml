@@ -59,7 +59,7 @@
                 <TextBlock Style="{StaticResource HeaderLabel}" Text="Languages"/>
                 <TextBlock Text="{Binding Languages}"/>
                 <TextBlock Style="{StaticResource HeaderLabel}" Text="Interface Directions"/>
-                <TextBlock Text="{Binding InterfaceDirection}"/>
+                <TextBlock Text="{Binding PrimaryInterfaceDirection}"/>
                 <TextBlock Style="{StaticResource HeaderLabel}" Text="Paper Size"/>
                 <TextBlock Text="{Binding PaperSize}"/>
                 <TextBlock Style="{StaticResource HeaderLabel}" Text="Length Units"/>

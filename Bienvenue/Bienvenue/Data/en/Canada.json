@@ -1,7 +1,7 @@
 {
     "CountryName": "Canada",
     "Abbreviation": "CA",
-    "ImageUrl": "",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Moraine_Lake_17092005.jpg",
     "Currency": "Dollar",
     "DateFormat": "DD/MM/YYYY, MM/DD/YYYY, YYYY/MM/DD",
     "TimeFormat": "(English h:mm:ss tt) (French HH:mm:ss)",

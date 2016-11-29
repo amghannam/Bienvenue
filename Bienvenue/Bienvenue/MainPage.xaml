@@ -50,8 +50,8 @@
         </ListView>
         <CommandBar Background="RoyalBlue" Foreground="White" Grid.Row="2" IsOpen="True" IsSticky="True">
             <CommandBar.PrimaryCommands>
-                <AppBarButton Label="Cortana" Icon="Microphone"/>
-                <AppBarButton Label="Compare" Icon="BrowsePhotos"/>
+                <!--<AppBarButton Label="Cortana" Icon="Microphone"/>-->
+                <!--<AppBarButton Label="Compare" Icon="BrowsePhotos"/>-->
                 <AppBarButton Label="Reset" Command="{Binding ResetCountries}" Icon="Undo"/>
                 <AppBarButton Label="Add" Command="{Binding AddCountry}" Icon="Add"/>
                 <AppBarButton Label="Exit" Command="{Binding ExitApp}" Icon="Cancel"/> 

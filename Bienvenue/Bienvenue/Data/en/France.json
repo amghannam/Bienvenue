@@ -1,8 +1,8 @@
 {
     "CountryName": "France",
     "Abbreviation": "FR",
-    "ImageUrl": "",
-	"Currency": "Euro",
+    "ImageUrl": "https://cdn.pixabay.com/photo/2016/02/22/07/52/paris-1214908_960_720.jpg",
+    "Currency": "Euro",
     "DateFormat": "DD/MM/YYYY",
     "TimeFormat": "HH:mm:ss",
     "12Hour": false,
