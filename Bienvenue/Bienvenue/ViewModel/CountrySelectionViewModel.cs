@@ -14,8 +14,8 @@ namespace Bienvenue.ViewModel
         public CountrySelectionViewModel () {
             Instances.Add(this);
         }
-        private static ICollection<CountrySelectionViewModel> _instances;
-        private static ICollection<CountrySelectionViewModel> Instances
+        internal static ICollection<CountrySelectionViewModel> _instances;
+        internal static ICollection<CountrySelectionViewModel> Instances
         {
             get {
                 if (_instances == null) _instances = new List<CountrySelectionViewModel>();
@@ -36,7 +36,6 @@ namespace Bienvenue.ViewModel
             set
             {
                 _verticalOffset = value;
-                RaisePropertyChanged();
                 foreach(var inst in Instances) {
                     if (inst == this) continue;
                     inst.RaisePropertyChanged("VerticalOffset");

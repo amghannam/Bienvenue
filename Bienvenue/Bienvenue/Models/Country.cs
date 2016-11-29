@@ -207,7 +207,7 @@ namespace Bienvenue.Models
 
         private string _interfaceDirection;
         [DataMember]
-        public string InterfaceDirection
+        public string PrimaryInterfaceDirection
         {
             get { return _interfaceDirection; }
             set { _interfaceDirection = value; RaisePropertyChanged(); }
