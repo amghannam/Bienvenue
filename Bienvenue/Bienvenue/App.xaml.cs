@@ -125,10 +125,10 @@ namespace Bienvenue
                         dialog.Content = "Reseting...";
                         model.ResetCountriesCommand();
                         break;
-                    case "Add a new country":
+           /*         case "Add a new country":
                         dialog.Content = "Adding...";
-                       // model.AddCountryCommand();
-                        break;
+                        model.AddCountryCommand();
+                        break; */ 
                     default:
                         Debug.WriteLine("Could not find command.");
                         break; 
