@@ -121,13 +121,9 @@ namespace Bienvenue
                         dialog.Content = "Reseting...";
                         model.ResetCountriesCommand();
                         break;
-                    case "Start over":
-                        dialog.Content = "Reseting...";
-                        model.ResetCountriesCommand();
-                        break;
-           /*         case "Add a new country":
+                    case "AddCountry":
                         dialog.Content = "Adding...";
-                       // model.AddCountryCommand();
+                        model.AddCountryCommand();
                         break;
                     case "CompareCountries":
                         dialog.Content = "Getting the differences between the countries...";
