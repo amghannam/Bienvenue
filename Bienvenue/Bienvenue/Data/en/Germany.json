@@ -1,7 +1,7 @@
 {
     "CountryName": "Germany",
     "Abbreviation": "GR",
-    "ImageUrl": "",
+    "ImageUrl": "https://cdn.pixabay.com/photo/2013/11/04/19/22/night-scene-205401_960_720.jpg",
     "Currency": "Euro",
     "DateFormat": "YYYY-MM-DD",
     "TimeFormat": "HH:mm:ss",
