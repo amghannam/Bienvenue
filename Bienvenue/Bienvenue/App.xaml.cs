@@ -129,12 +129,24 @@ namespace Bienvenue
                         dialog.Content = "Adding...";
                        // model.AddCountryCommand();
                         break;
+                    case "CompareCountries":
+                        dialog.Content = "Getting the differences between the countries...";
+                        var countryA = SemanticInterpretation("countryA", result);
+                        var countryB = SemanticInterpretation("countryB", result);
+                        model.AddCountryCommand(countryA);
+                        model.AddCountryCommand(countryB);
+                         break;
                     default:
                         Debug.WriteLine("Could not find command.");
                         break; 
                 }
             }
             await dialog.ShowAsync(); 
+        }
+
+        private string SemanticInterpretation(string interpretationKey, SpeechRecognitionResult speechRecognitionResult)
+        {
+            return speechRecognitionResult.SemanticInterpretation.Properties[interpretationKey].FirstOrDefault();
         }
 
         /// <summary>

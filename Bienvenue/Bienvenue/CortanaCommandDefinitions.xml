@@ -24,5 +24,11 @@
         <Feedback>Adding country...</Feedback>
           <Navigate/>
         </Command>
+		<Command Name="CompareCountries">
+			<Example>Differences between United States of America to Jordan</Example>
+			<ListenFor>Differences between {countryA} and {countryB}</ListenFor>
+			<Feedback>Listing differences between {countryA} and {countryB}</Feedback>
+			<Navigate/>
+		</Command>
   </CommandSet>
 </VoiceCommands>
