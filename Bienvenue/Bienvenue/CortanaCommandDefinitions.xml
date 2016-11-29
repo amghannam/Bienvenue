@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
-<!-- Cortana commands are included here; currently, only the exit command is implemented as a test case --> 
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
   <CommandSet xml:lang="en-us" Name="CommandSet">
     <CommandPrefix>Listen up</CommandPrefix>
