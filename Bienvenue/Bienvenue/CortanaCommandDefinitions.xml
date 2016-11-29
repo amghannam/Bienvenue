@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
   <CommandSet xml:lang="en-us" Name="CommandSet">
-    <CommandPrefix>Listen up</CommandPrefix>
+    <CommandPrefix>Please</CommandPrefix>
     <Example>Quit</Example>
     <Command Name="Exit">
       <Example>Exit, quit</Example>
@@ -24,9 +24,9 @@
           <Navigate/>
         </Command>
 		<Command Name="CompareCountries">
-			<Example>Differences between United States of America to Jordan</Example>
-			<ListenFor>Differences between {countryA} and {countryB}</ListenFor>
-			<Feedback>Listing differences between {countryA} and {countryB}</Feedback>
+			<Example>Compare the United States of America and Jordan</Example>
+			<ListenFor>Compare {countryA} and {countryB}</ListenFor>
+			<Feedback>Listing differences between {countryA} and {countryB}...</Feedback>
 			<Navigate/>
 		</Command>
   </CommandSet>
