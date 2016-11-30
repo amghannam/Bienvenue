@@ -24,7 +24,7 @@
           <Navigate/>
         </Command>
 		<Command Name="CompareCountries">
-			<Example>Differences between United States of America to Jordan</Example>
+			<Example>Differences between United States of America and Jordan</Example>
 			<ListenFor>Differences between {countryA} and {countryB}</ListenFor>
 			<Feedback>Listing differences between {countryA} and {countryB}</Feedback>
 			<Navigate/>
