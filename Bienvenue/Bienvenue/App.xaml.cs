@@ -121,10 +121,6 @@ namespace Bienvenue
                         dialog.Content = "Reseting...";
                         model.ResetCountriesCommand();
                         break;
-                    case "Start over":
-                        dialog.Content = "Reseting...";
-                        model.ResetCountriesCommand();
-                        break;
                     case "AddCountry":
                         dialog.Content = "Adding...";
                         model.AddCountryCommand();
@@ -135,7 +131,7 @@ namespace Bienvenue
                         var countryB = SemanticInterpretation("countryB", result);
                         model.AddCountryCommand(countryA);
                         model.AddCountryCommand(countryB);
-                        break;
+                         break;
                     default:
                         Debug.WriteLine("Could not find command.");
                         break; 
