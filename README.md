@@ -23,4 +23,4 @@ Because the app is unpublished, it is best to import it to Visual Studio and run
 
 ## Sample Image
 
-![alt tag] (http://i.imgur.com/undefined.png) 
+![alt tag] (http://i.imgur.com/F8T5rcg.png) 
